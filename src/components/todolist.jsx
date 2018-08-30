@@ -5,10 +5,7 @@ class TodoList extends Component {
   render() {
     return (
       <div>
-        {/* <input onKeyPress={e => (e.key === "Enter" ? this.addTodo(e) : "")} /> */}
-        {/* {this.state.todos.map((todo, i) => (
-          <Todo todo={todo} key={i} onDelete={val => this.handleDelete(val)} />
-        ))} */}
+          <ul onClick={this.props.completeTodo}>{this.props.todos.map(todo => <Todo todo={todo} />)}</ul>
       </div>
     );
   }

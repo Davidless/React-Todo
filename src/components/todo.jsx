@@ -1,34 +1,27 @@
 import React, { Component } from "react";
 
 class Todo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicked: false,
-      todo: this.props.todo
-    };
-  }
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       clicked: false,
+//       todo: this.props.todo
+//     };
+//   }
 
   render() {
     return (
-      <React.Fragment>
-        style=
+      <div>
+        {/* style=
         {{
           textDecoration: this.state.clicked ? "line-through" : "none"
         }}
         onClick=
         {e => this.setState({ clicked: !this.state.clicked })}>{" "}
-        {this.state.todo}
-        <button
-          value={this.props.todo}
-          type="submit"
-          onClick={e => this.props.onDelete(e.target.value)}
-        >
-          Delete
-        </button>
-      </React.Fragment>
+        {this.state.todo} */}
+      </div>
     );
-  }
+  };
 }
 
 export default Todo;

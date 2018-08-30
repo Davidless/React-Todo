@@ -13,7 +13,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ name: "David" });
+    // will get called after initial render
+    // CDM is a good place to do initial data fetch
+    const initialTodos = JSON.parse(localStorage.getItem("todos"));
+    this.setState({ todos: initialTodos });
   }
 
   persistTodos = () => {
@@ -58,7 +61,7 @@ class App extends Component {
         <form onSubmit={this.handleSubmitTodo}>
           <input
             type="text"
-            placeholer="Add Todo"
+            placeholder="Add Todo"
             name="newTodo"
             value={this.state.newTodo}
             onChange={this.todoHandler}
