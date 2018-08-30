@@ -1,27 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Todo extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       clicked: false,
-//       todo: this.props.todo
-//     };
-//   }
+const styles = {
+  textDecoration: "line-through"
+};
 
-  render() {
-    return (
-      <div>
-        {/* style=
-        {{
-          textDecoration: this.state.clicked ? "line-through" : "none"
-        }}
-        onClick=
-        {e => this.setState({ clicked: !this.state.clicked })}>{" "}
-        {this.state.todo} */}
-      </div>
-    );
-  };
-}
+const Todo = props => {
+  return (
+    <div
+      style={props.todo.completed ? styles : null}
+      onClick={() => props.completeTodo(props.todo)}
+    >
+      {props.todo.text}
+    </div>
+  );
+};
 
 export default Todo;

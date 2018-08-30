@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import TodoList from "./components/TodoList";
-// import Todo from "./components/Todo";
 
 class App extends Component {
   constructor() {
@@ -70,7 +69,7 @@ class App extends Component {
         </form>
         <button onClick={this.onClearTodos}>Clear Completed</button>
         <TodoList
-          completeTodos={this.onCompleteHandler}
+          completeTodo={this.onCompleteHandler}
           todos={this.state.todos}
         />
       </div>
